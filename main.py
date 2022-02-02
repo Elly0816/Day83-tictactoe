@@ -97,4 +97,3 @@ player2 = input("Enter your name player2, you will be 'Y': ")
 game = TicTacToe(player_1=player1, player_2=player2)
 game.new_board()
 game.play()
-
