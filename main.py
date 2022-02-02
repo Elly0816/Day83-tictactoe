@@ -111,3 +111,4 @@ while new_game:
         else:
             again = input('Do you want to start a new game> (y/n): ').lower()
             valid = False
+print("Goodbye")
