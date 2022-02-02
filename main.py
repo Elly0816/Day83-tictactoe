@@ -90,10 +90,24 @@ class TicTacToe:
             self.turns += 1
 
 
-print("Welcome to TIC-TAC-TOE!\n"
-      "You play by entering a 2 digit number representing the rows and column of the grid respectively\n")
-player1 = input("Enter your name player 1, you will be 'X': ")
-player2 = input("Enter your name player2, you will be 'Y': ")
+new_game = True
+while new_game:
+    print("Welcome to TIC-TAC-TOE!\n"
+          "You play by entering a 2 digit number representing the rows and column of the grid respectively\n")
+    player1 = input("Enter your name player 1, you will be 'X': ")
+    player2 = input("Enter your name player2, you will be 'Y': ")
 
-game = TicTacToe(player_1=player1, player_2=player2)
-game.play()
+    game = TicTacToe(player_1=player1, player_2=player2)
+    game.play()
+    valid = False
+    while not valid:
+        again = input('Do you want to start a new game> (y/n): ').lower()
+        if again == 'y':
+            new_game = True
+            valid = True
+        elif again == 'n':
+            new_game = False
+            valid = True
+        else:
+            again = input('Do you want to start a new game> (y/n): ').lower()
+            valid = False
