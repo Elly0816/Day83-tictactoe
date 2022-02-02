@@ -64,6 +64,7 @@ class TicTacToe:
                 self.set_mark(user=self.user2_pos)
 
     def play(self):
+        self.new_board()
         while self.continue_game():
             self.pos_valid = True
             while self.pos_valid:
@@ -95,5 +96,4 @@ player1 = input("Enter your name player 1, you will be 'X': ")
 player2 = input("Enter your name player2, you will be 'Y': ")
 
 game = TicTacToe(player_1=player1, player_2=player2)
-game.new_board()
 game.play()
